@@ -9,7 +9,7 @@ public class ProductEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long productId;
 
     private String name;
     private double price;
@@ -25,12 +25,12 @@ public class ProductEntity {
         this.category = category;
     }
 
-    public Long getId() {
-        return id;
+    public Long getProductId() {
+        return productId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setProductId(Long productId) {
+        this.productId = productId;
     }
 
     public String getName() {
