@@ -22,6 +22,11 @@ public class CartItemEntity {
     public CartItemEntity() {
     }
 
+    public CartItemEntity(ProductEntity product, int quantity) {
+        this.product = product;
+        this.quantity = quantity;
+    }
+
     public CartItemEntity(CartEntity cart, ProductEntity product, int quantity) {
         this.cart = cart;
         this.product = product;

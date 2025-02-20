@@ -34,4 +34,8 @@ public class UserService {
             return List.of();
         }
     }
+
+    public UserEntity getUserById(Long id){
+        return userRepository.findById(id).orElseThrow(() -> new RuntimeException("Не удалось найти пользователя"));
+    }
 }

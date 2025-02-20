@@ -6,6 +6,7 @@ import com.mironov.shopping.repository.ProductRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.time.DateTimeException;
 import java.util.List;
 
 @Service
@@ -78,6 +79,10 @@ public class ProductService {
             }
         }
         return List.of();
+    }
+
+    public ProductEntity getProductById(Long id){
+        return productRepository.findById(id).orElseThrow(() -> new DateTimeException("Не удалось получить продукт"));
     }
 
 
